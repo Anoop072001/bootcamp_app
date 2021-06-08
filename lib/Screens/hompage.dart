@@ -1,5 +1,9 @@
+import 'package:bootcamp_app/Screens/Social.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'AboutMe.dart';
+import 'exp.dart';
+import 'hobby.dart';
 import 'widgets/topBar.dart';
 
 class HomePage extends StatelessWidget {
@@ -45,24 +49,27 @@ class HomePage extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 23),
-                child: Container(
-                  padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(
-                      30,
+                child: GestureDetector(
+                  child: Container(
+                    padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(
+                        30,
+                      ),
+                      color: Colors.redAccent[400],
                     ),
-                    color: Colors.redAccent[400],
-                  ),
-                  child: Text(
-                    "Contact me",
-                    style: GoogleFonts.poppins(
-                      textStyle: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
+                    child: Text(
+                      "Contact me",
+                      style: GoogleFonts.poppins(
+                        textStyle: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ),
+                  onTap: () {},
                 ),
               ),
               SizedBox(
@@ -107,7 +114,14 @@ class BottomScroll extends StatelessWidget {
                   ),
                 ),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => About(),
+                  ),
+                );
+              },
             ),
           ),
           Padding(
@@ -130,7 +144,14 @@ class BottomScroll extends StatelessWidget {
                   ),
                 ),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Social(),
+                  ),
+                );
+              },
             ),
           ),
           Padding(
@@ -153,7 +174,14 @@ class BottomScroll extends StatelessWidget {
                   ),
                 ),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Hobby(),
+                  ),
+                );
+              },
             ),
           ),
           Padding(
@@ -176,7 +204,14 @@ class BottomScroll extends StatelessWidget {
                   ),
                 ),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Exp(),
+                  ),
+                );
+              },
             ),
           ),
         ],
